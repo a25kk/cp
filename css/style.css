@@ -1,0 +1,297 @@
+/* General page styling */
+html {
+  height: 100%;
+}
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+  font-size: 13px;
+  color: black;
+  height: 100%;
+  background: white;
+}
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+pre,
+dl {
+  margin-bottom: 1.0em;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+}
+h1 {
+  font-size: 32px;
+  line-height: 1.1em;
+}
+h2 {
+  font-size: 20px;
+  line-height: 1.1em;
+  margin-top: 3em;
+}
+h3 {
+  margin-top: 3em;
+  font-size: 18px;
+}
+p {
+  line-height: 1.8em;
+}
+ul,
+ol {
+  margin-left: 1.5em;
+}
+a,
+a code {
+  color: black;
+  text-decoration: none;
+}
+a:hover,
+a:hover code {
+  color: black;
+}
+a:active,
+a:active code {
+  color: black;
+}
+a:visited,
+a:visited code {
+  color: black;
+}
+a img {
+  border: none;
+}
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: bold;
+}
+blockquote {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  border-left: 1px solid #333;
+  font-style: italic;
+}
+.logo img {
+  margin: 20px auto 20px auto;
+}
+#main {
+  padding: 0px;
+  margin: 0px auto 0px auto;
+  border: 0px solid red;
+}
+.preview {
+  margin-bottom: 20px;
+  border: 0px solid blue;
+}
+.claim {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+div.ppt {
+  color: #FFFFFF;
+  display: none;
+  font-size: 12px !important;
+  margin: 0 0 5px 15px;
+  z-index: 9999;
+}
+header h1 {
+  text-align: left;
+  font-size: 4em;
+  font-weight: bold;
+  margin: 30px 0 3px 0;
+  padding: 0px 50px 0px 100px;
+  text-shadow: 0px 0px 1px #ffffff;
+  color: #333333;
+}
+header p {
+  text-align: left;
+  font-size: 2em;
+  color: #333;
+  margin: 0;
+  padding: 20px 50px 0px 100px;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 1px #ffffff;
+}
+/* Grid container */
+#tiles {
+  list-style-type: none;
+  position: relative;
+  margin: 0px;
+}
+/* Grid items */
+#tiles li {
+  width: 140px;
+  background-color: #ffffff;
+  display: none;
+  cursor: pointer;
+  margin: 10px;
+  border: 1px solid red;
+}
+#tiles li img {
+  display: block;
+  width: 140px;
+}
+/*Grid item text*/
+#tiles li p {
+  color: #666;
+  font-size: 12px;
+  margin: 7px 0px 0px 7px;
+}
+#tiles li h4 {
+  color: #333;
+  font-size: 16px;
+  margin: 7px 0px 0px 7px;
+}
+#tiles li h5 {
+  color: #333;
+  font-size: 12px;
+  margin: 7px 0px 0px 7px;
+}
+/* Some extra styles to randomize heights of grid items */
+#tiles ali:nth-child(3n) {
+  height: 175px;
+}
+#tiles ali:nth-child(4n-3) {
+  padding-bottom: 30px;
+}
+#tiles ali:nth-child(5n) {
+  height: 250px;
+}
+/* Isotope Filtering */
+.isotope-item {
+  z-index: 2;
+}
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+/* Isotope CSS3 transitions */
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: top, left, opacity;
+  transition-property: transform, opacity;
+}
+/* disabling Isotope CSS3 transitions */
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s;
+}
+/* disable CSS transitions for containers with infinite scrolling */
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+/**** Isotope styles ****/
+/* required for containers to inherit vertical size from window */
+#container {
+  border: 0px solid #666;
+  padding: 0px;
+  margin-bottom: 20px;
+}
+.element {
+  width: 230px;
+  height: 230px;
+  margin: 5px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  color: #222;
+}
+.element img {
+  width: 230px;
+}
+.element * {
+  position: absolute;
+  margin: 0;
+}
+/**** Example Options ****/
+#options {
+  border: 0px solid red;
+  margin: 0px 0px 0px 0px;
+}
+#options h3 {
+  font-size: 15px;
+}
+#options h4 {
+  font-weight: bold;
+}
+#options ul {
+  margin: 0px auto;
+  list-style: none;
+  border: 0px solid red;
+  width: 400px;
+}
+#options ul ul {
+  margin-left: 0;
+}
+#options li {
+  float: left;
+  margin-bottom: 0.2em;
+  color: #222;
+  padding: 5px 10px 5px 10px;
+  font-size: 1.5em;
+}
+#options li a {
+  display: block;
+  color: #222;
+  font-weight: bold;
+}
+#options li:first-child a {
+  border: none;
+}
+#options li:last-child a {
+  border: none;
+}
+#options li a.selected {
+  color: #999999;
+  outline: none;
+}
+/* footer */
+footer {
+  color: #333333;
+  height: 4px;
+  margin: 40px auto 40px auto;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+footer a {
+  margin: 0px 20px 0px 0px;
+}
